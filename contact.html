@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/x-icon" href="logo/heatbynature-logo.png">
+    <title>Heat by Nature</title>
+</head>
+
+<body>
+    <!-- Navbar --> 
+    <nav class="nav">
+        <div class="button">
+            <a href="home.html"><img src="logo/heatbynature-logo.png"></a>
+        </div>
+
+        <div class="nav_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav_menu">
+            <ul id="nav-links">
+                <li class="button"><span><a href="home.html">home</a></span></li>
+                <li class="button"><span><a href="gallery.html">gallery</a></span></li>
+                <li class="button"><span><a href="pacvac.html">pacvac</a></span></li>
+                <li class="button"><span><a class="active" href="contact.html">contact</a></span></li>
+            </ul>
+    </div>
+    </nav>
+
+    <!-- Contact form -->
+
+    <div class="header">
+        <h3>Send Us a Message!</h3>
+        <p>Please fill in the form below to get in touch with us</p>
+    </div>
+
+    <div class="container">
+        <form id="contact-form">
+          <input type="text" id="name" name="name" placeholder="Name *" oninvalid="this.setCustomValidity('Please fill out this field')" 
+          onchange="this.setCustomValidity('')" required>
+      
+          <!--<label for="email">Email *</label>-->
+          <input type="email" id="email" name="email" placeholder="Email *" oninvalid="this.setCustomValidity('Please fill out this field')"
+          onchange="this.setCustomValidity('')" required>
+      
+          <input type="text" id="company" name="company" placeholder="Company *" oninvalid="this.setCustomValidity('Please fill out this field')"
+          onchange="this.setCustomValidity('')" required>
+      
+          <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+      
+          <input type="submit" id="button" value="Send message">
+
+          <p>* Required</p>
+        </form>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <p id="popup-message">Your message has been sent successfully!</p>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+      
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="img">
+            <a href="home.html"><img src="logo/heatbynature-logo.png"></a>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+
+</body>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  emailjs.init('_dWIFfrq8o-PkruSu'); // Replace with your actual EmailJS user ID
+
+  // Handle form submission
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const btn = form.querySelector('input[type="submit"]');
+    btn.value = 'Sending...';
+
+    emailjs.sendForm('default_service', 'template_dl9aa2l', form)
+      .then(function(response) {
+        form.reset();
+        btn.value = 'Send message';
+        showPopup('Your message has been sent successfully!');
+      }, function(error) {
+        btn.value = 'Send message';
+        showPopup('Oops! Something went wrong. Please try again.');
+      });
+  });
+
+  // Popup logic
+  function showPopup(message) {
+    const popup = document.getElementById('popup');
+    const popupMessage = document.getElementById('popup-message');
+    popupMessage.textContent = message;
+    popup.style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+
+</html>

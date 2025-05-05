@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: Karla;
+}
+
+.content {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    gap: 0.5rem;               
+    margin-top: 2rem;
+    flex-wrap: wrap; 
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;  
+    align-items: center;       
+    gap: 0.5rem;               
+    margin-top: 2rem;
+    flex-wrap: wrap; 
+    opacity: 0;
+    animation: fadeInBottom 1s ease-out forwards;
+}
+
+.button2 a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button2 a:hover {
+    color: orangered;
+}
+
+.content p {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+.content h3 {
+    font-size: 3rem;
+    color: aliceblue;
+    margin-bottom: 0.8rem;
+    margin-top: 9rem;
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    animation: fadeInTop 1s ease-out forwards;
+}
+
+.content h2 {
+    font-size: 3rem;
+    color: orangered;
+    margin-bottom: 0.8rem;
+    margin-top: 9rem;
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    animation: fadeInTop 1s ease-out forwards;
+}
+
+video{
+
+    background: url("video-fallback.jpg") center center no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    position:fixed;
+    object-fit: fill;
+    object-position: center center;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+      
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInTop {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInBottom {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    font-family: Karla;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #EADBC8;
+    max-height: 10rem;
+    display: flex;
+}
+
+.footer img {
+    width: auto;
+    height: 5rem;
+    margin: auto 1rem;
+    padding-left: 8rem;
+}
+
+.footer button {
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  

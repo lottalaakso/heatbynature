@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    padding: 0.9rem;
+    color: #2596be;
+    font-size: 2.5rem;
+    font-family: Karla;
+}
+
+img {
+    vertical-align: middle;
+}
+  
+.container {
+    position: relative;
+    max-width: 1200px; /* Match the image's max-width */
+    margin: auto;
+    padding: 1.2rem;
+}
+
+.mySlides {
+    display: none;
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.mySlides img {
+    width: 100%;
+    max-width: 980px;  /* adjust this to your desired width */
+    max-height: 500px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #2596be;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    color: black;
+}
+  
+.numbertext {
+    color: #2596be;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    font-family: Karla;
+}
+
+.row {
+    margin-top: 20px; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.column img.demo {
+    width: auto;
+    height: 90px;
+    object-fit: contain;
+    cursor: pointer;
+}
+  
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}

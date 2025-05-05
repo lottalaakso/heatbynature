@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" type="image/x-icon" href="logo/heatbynature-logo.png">
+    <title>Heat by Nature</title>
+</head>
+
+<body>
+    <!-- Navbar --> 
+    <nav class="nav">
+        <div class="button">
+            <a href="home.html"><img src="logo/heatbynature-logo.png"></a>
+        </div>
+
+        <div class="nav_hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav_menu">
+            <ul id="nav-links">
+                <li class="button"><span><a href="home.html">home</a></span></li>
+                <li class="button"><span><a class="active" href="gallery.html">gallery</a></span></li>
+                <li class="button"><span><a href="pacvac.html">pacvac</a></span></li>
+                <li class="button"><span><a href="contact.html">contact</a></span></li>
+            </ul>
+    </div>
+    </nav>
+
+    <!-- Gallery -->
+
+    <!-- <div class="header">GALLERY</div> -->
+
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext">1 / 12</div>
+            <img src="images/hylly1.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+            <div class="numbertext">2 / 12</div>
+            <img src="images/kattila1.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+            <div class="numbertext">3 / 12</div>
+            <img src="images/kattila6.jpg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+            <div class="numbertext">4 / 12</div>
+            <img src="images/koukku3.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+            <div class="numbertext">5 / 12</div>
+            <img src="images/koukku4.jpg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+            <div class="numbertext">6 / 12</div>
+            <img src="images/liekki1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">7 / 12</div>
+            <img src="images/paistinpannu1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">8 / 12</div>
+            <img src="images/poltin2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">9 / 12</div>
+            <img src="images/ritila1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">10 / 12</div>
+            <img src="images/takakoukku1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">11 / 12</div>
+            <img src="images/takka1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">12 / 12</div>
+            <img src="images/varoitus.jpg" style="width:100%">
+        </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor" src="images/hylly1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/kattila1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/kattila6.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/koukku3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/koukku4.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+            </div>    
+
+            <div class="column">
+                <img class="demo cursor" src="images/liekki1.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/paistinpannu1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/poltin2.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/ritila1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/takakoukku1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/takka1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/varoitus.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="img">
+            <a href="home.html"><img src="logo/heatbynature-logo.png"></a>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+
+</body>
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</html>
