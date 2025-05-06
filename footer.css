@@ -10,8 +10,9 @@
     bottom: 0;
     width: 100%;
     background-color: #EADBC8;
-    max-height: 10rem;
-    display: flex;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
 }
 
 .footer img {

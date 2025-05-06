@@ -72,14 +72,19 @@
 }
 
 .pdf {
-  background-color: #f4f4f4;
+  background-color: #2596be;
   max-width: 4.5rem;
   padding: 0.6rem;
   border-radius: 0.3rem;
 }
 
 .pdf:hover {
-  background-color: orangered;
+  background-color:#cec1b0;
+}
+
+.pdf a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 768px) {

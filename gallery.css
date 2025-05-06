@@ -21,6 +21,14 @@ img {
     max-width: 1200px; /* Match the image's max-width */
     margin: auto;
     padding: 1.2rem;
+    padding-bottom: 3rem;
+}
+
+.caption-container {
+    text-align: center;
+    padding: 2px 16px;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .mySlides {
@@ -48,7 +56,7 @@ img {
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: #2596be;
+    color: black;
     font-weight: bold;
     font-size: 2rem;
     border-radius: 0 3px 3px 0;
@@ -66,7 +74,7 @@ img {
 }
   
 .numbertext {
-    color: #2596be;
+    color: black;
     font-size: 1.2rem;
     padding: 8px 12px;
     position: absolute;
@@ -75,7 +83,7 @@ img {
 }
 
 .row {
-    margin-top: 20px; 
+    margin-top: 2.5rem; 
 }
 
 .row:after {
