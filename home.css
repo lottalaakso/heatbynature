@@ -37,23 +37,12 @@
 
 .content p {
     font-size: 2rem;
-    color: aliceblue;
+    color: aliceblue; 
 }
 
 .content h3 {
     font-size: 3rem;
     color: aliceblue;
-    margin-bottom: 0.5rem;
-    margin-top: 7rem;
-    letter-spacing: 0.2rem;
-    opacity: 0;
-    animation: fadeInTop 1s ease-out forwards;
-    text-shadow: 2px 2px 4px #3b3a3a;
-}
-
-.content h2 {
-    font-size: 3rem;
-    color: #e34e0e;
     margin-bottom: 0.5rem;
     margin-top: 7rem;
     letter-spacing: 0.2rem;
@@ -110,4 +99,37 @@ video{
       opacity: 1;
       transform: translateY(0);
     }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+.videoContainer {
+  opacity: 0;
+}
+
+body {
+  background: rgba(250, 246, 213, 0.01);
+  background: linear-gradient(90deg, rgba(250, 246, 213, 1) 0%, rgba(218, 147, 93, 1) 24%, rgba(137, 86, 67, 1) 60%, rgba(67, 39, 39, 1) 100%);
+}
+
+.content {
+  display: grid;
+  text-align: center;
+  margin-top: -2rem;
+}
+
+.content p {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px #767575;
+}
+
+.content h3 {
+    font-size: 2rem;
+}
+
+.button2 a {
+  color: black;
+}
+
 }

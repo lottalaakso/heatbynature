@@ -46,12 +46,10 @@
           <input type="text" id="name" name="name" placeholder="Name *" oninvalid="this.setCustomValidity('Please fill out this field')" 
           onchange="this.setCustomValidity('')" required>
       
-          <!--<label for="email">Email *</label>-->
           <input type="email" id="email" name="email" placeholder="Email *" oninvalid="this.setCustomValidity('Please fill out this field')"
           onchange="this.setCustomValidity('')" required>
       
-          <input type="text" id="company" name="company" placeholder="Company *" oninvalid="this.setCustomValidity('Please fill out this field')"
-          onchange="this.setCustomValidity('')" required>
+          <input type="text" id="company" name="company" placeholder="Company">
       
           <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
       
@@ -84,10 +82,8 @@
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-  // Initialize EmailJS
-  emailjs.init('_dWIFfrq8o-PkruSu'); // Replace with your actual EmailJS user ID
+  emailjs.init('_dWIFfrq8o-PkruSu'); 
 
-  // Handle form submission
   document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -106,7 +102,6 @@
       });
   });
 
-  // Popup logic
   function showPopup(message) {
     const popup = document.getElementById('popup');
     const popupMessage = document.getElementById('popup-message');

@@ -2,7 +2,7 @@
 
 .tab {
     overflow: hidden;
-}
+} 
   
 .tab-wrapper {
     display: flex;
@@ -90,7 +90,7 @@
 @media (max-width: 768px) {
     .tab-wrapper {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 2rem;
       align-items: center;
     }
   
@@ -116,6 +116,10 @@
     .product-description {
       max-width: 90%;
       text-align: center;
+    }
+
+    .pdf {
+      margin: auto;
     }
   
     .product-description h1 {

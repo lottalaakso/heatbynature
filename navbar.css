@@ -11,7 +11,6 @@ body {
 }
 
 .nav {
-    /*background-color: #FEFAF6; */
     height: 8.5rem;
     display: flex;
     justify-content: space-between;
