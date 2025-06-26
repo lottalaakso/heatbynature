@@ -4,6 +4,10 @@
     font-family: Karla;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -113,17 +117,31 @@ body {
     position: relative;
 }
 
+
 @media screen and (max-width: 768px) {
+  .nav {
+    padding: 0 1rem;
+  }
+
+  .button img {
+    padding-left: 0;
+    height: 5rem; 
+  }
+
   .nav_menu ul {
-    flex-direction: column;
-    background-color: #FEFAF6;
-    width: 100%;
     position: fixed;
-    top: 7rem;
+    top: 7rem; 
     left: 0;
+    width: 100vw; 
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background-color: white;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 999;
+    align-items: center;
   }
 
   .nav_menu ul.show {
@@ -133,5 +151,33 @@ body {
 
   .nav_hamburger {
     display: flex;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .nav_hamburger span {
+    width: 100%;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .nav {
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+
+  .button img {
+    padding-left: 0;
+    margin-right: 3rem; 
+    height: 5.5rem;
+  }
+
+  .nav_menu {
+    margin-left: auto; 
+  }
+
+  .nav_menu ul {
+    padding-right: 3rem;
+  }
+}
+

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+html, body {
+  overflow-x: hidden;
+}
+
 .header {
     text-align: center;
     padding: 0.9rem;
@@ -135,5 +139,17 @@ input[type=submit]:hover {
     to {
       opacity: 1;
       transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: auto;
+        width: 80%;
+    }
+
+    .info {
+        width: 90%;
     }
 }

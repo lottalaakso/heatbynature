@@ -4,12 +4,17 @@
     font-family: Karla;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .content {
     margin: auto;
     width: 70%;
     display: flex;
     justify-content: center;  
-    align-items: center;       
+    align-items: center;
+    text-align: center;       
     gap: 0.7rem;               
     margin-top: 4rem;
     flex-wrap: wrap; 
@@ -18,7 +23,8 @@
 .contact-content {
     display: flex;
     justify-content: center;  
-    align-items: center;       
+    align-items: center;     
+    text-align: center;  
     gap: 0.5rem;      
     flex-wrap: wrap; 
     opacity: 0;
@@ -41,7 +47,7 @@
 }
 
 .content h3 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     color: aliceblue;
     margin-bottom: 0.5rem;
     margin-top: 7rem;
@@ -101,17 +107,34 @@ video{
     }
 }
 
-
 @media screen and (max-width: 1000px) {
+  .videoContainer {
+    opacity: 0;
+  }
+
+  body {
+  /* https://grabient.com/HQJgbAjANKEKwxABmsOBOALDMB2EOAHNqAMxiKFIyma5TUjBJZSbASHpA/ */
+  background: linear-gradient(90deg, rgba(218, 197, 116, 1.000) 0.000%, rgba(218, 197, 116, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 92.308%, rgba(80, 0, 0, 1.000) 92.308% 100.000%)
+  }
+
+  .content {
+  display: grid;
+  text-align: center;
+  margin-top: -1rem;
+  }
+} 
+
+@media screen and (max-width: 768px) {
 
 .videoContainer {
   opacity: 0;
 }
 
 body {
-  background: rgba(250, 246, 213, 0.01);
-  background: linear-gradient(90deg, rgba(250, 246, 213, 1) 0%, rgba(218, 147, 93, 1) 24%, rgba(137, 86, 67, 1) 60%, rgba(67, 39, 39, 1) 100%);
+/* https://grabient.com/HQJgbAjANKEKwxABmsOBOALDMB2EOAHNqAMxiKFIyma5TUjBJZSbASHpA/ */
+background: linear-gradient(90deg, rgba(218, 197, 116, 1.000) 0.000%, rgba(218, 197, 116, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 92.308%, rgba(80, 0, 0, 1.000) 92.308% 100.000%)
 }
+
 
 .content {
   display: grid;
@@ -126,10 +149,11 @@ body {
 
 .content h3 {
     font-size: 2rem;
+    text-shadow: 2px 2px 4px #767575;
 }
 
 .button2 a {
-  color: black;
+  color: #ff793f;
 }
 
 }
