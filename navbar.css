@@ -117,7 +117,6 @@ body {
     position: relative;
 }
 
-
 @media screen and (max-width: 768px) {
   .nav {
     padding: 0 1rem;
@@ -129,12 +128,13 @@ body {
   }
 
   .nav_menu ul {
-    position: fixed;
+    position: absolute;
     top: 7rem; 
     left: 0;
-    width: 100vw; 
+    width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
     flex-direction: column;
     background-color: white;
     opacity: 0;
@@ -142,6 +142,8 @@ body {
     transition: opacity 0.3s ease;
     z-index: 999;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .nav_menu ul.show {
@@ -177,7 +179,7 @@ body {
   }
 
   .nav_menu ul {
-    padding-right: 3rem;
+    justify-content: center;
   }
 }
 

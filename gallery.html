@@ -36,59 +36,48 @@
 
     <!-- Gallery -->
 
-    <div class="container">
+    <div class="gallery-container">
         <div class="mySlides">
-            <div class="numbertext">1 / 11</div>
             <img src="images/hylly1.jpg" style="width:100%">
         </div>
       
         <div class="mySlides">
-            <div class="numbertext">2 / 11</div>
             <img src="images/kattila1.jpg" style="width:100%">
         </div>
       
         <div class="mySlides">
-            <div class="numbertext">3 / 11</div>
             <img src="images/kattila6.jpg" style="width:100%">
         </div>
           
         <div class="mySlides">
-            <div class="numbertext">4 / 11</div>
             <img src="images/koukku3.jpg" style="width:100%">
         </div>
       
         <div class="mySlides">
-            <div class="numbertext">5 / 11</div>
             <img src="images/koukku4.jpg" style="width:100%">
         </div>
           
         <div class="mySlides">
-            <div class="numbertext">6 / 11</div>
             <img src="images/liekki1.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">7 / 11</div>
             <img src="images/paistinpannu1.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">8 / 11</div>
             <img src="images/poltin2.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">9 / 11</div>
             <img src="images/ritila1.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">10 / 11</div>
             <img src="images/takakoukku1.jpg" style="width:100%">
         </div>
 
         <div class="mySlides">
-            <div class="numbertext">11 / 11</div>
             <img src="images/takka1.jpg" style="width:100%">
         </div>
           
@@ -191,7 +180,7 @@
   let startX = 0;
   let endX = 0;
 
-  const swipeArea = document.querySelector('.container'); // adjust if needed
+  const swipeArea = document.querySelector('.gallery-container'); // adjust if needed
 
   if (window.innerWidth <= 768 && swipeArea) {
     swipeArea.addEventListener('touchstart', function (e) {

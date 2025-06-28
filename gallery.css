@@ -20,7 +20,7 @@ img {
     vertical-align: middle;
 }
   
-.container {
+.gallery-container {
     position: relative;
     max-width: 1200px; 
     margin: auto;
@@ -126,4 +126,46 @@ img {
       opacity: 1;
       transform: translateX(0);
     }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-container {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .gallery-container p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .caption-container {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .mySlides img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .prev, .next {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+
+  .column {
+    width: 25%;
+    padding: 4px;
+  }
+
+  .column img.demo {
+    height: 60px;
+  }
+
+  .row {
+    margin-bottom: 2rem;
+  }
 }
