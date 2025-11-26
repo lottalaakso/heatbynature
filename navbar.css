@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #DAC0A3;
+    color: #301304;
     position: relative;
     top: 0;
     z-index: 1000;
@@ -89,7 +89,7 @@ body {
 
 .nav_menu ul li a {
     text-decoration: none;
-    color: #DAC0A3;
+    color: #301304;
     padding: 1rem;
     display: block;
     font-size: 1.75rem;
