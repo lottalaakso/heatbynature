@@ -17,13 +17,14 @@ body {
 .nav {
     height: 8.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     color: #301304;
     position: relative;
     top: 0;
     z-index: 1000;
     background-color: rgba(255, 255, 255);
+    width: 100%;
 }
 
 .button {
@@ -43,44 +44,22 @@ body {
   font-weight: bold;
 }
 
-.button a.active_pacvac {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2596be;
-  }
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -10px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 5px;
-  font-size: 2rem;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+.button a:hover {
+  font-weight: bold;
 }
 
 .button img{
     width: auto;
     height: 6.8rem;
     margin: auto 1rem;
-    padding-left: 8rem;
+    padding-left: 3rem;
 }
 
 .nav_menu ul {
     margin: auto 1rem;
     padding: 0;
     display: flex;
-    padding-right: 6rem;
+    align-items: center;
 }
 
 .nav_menu ul li {
