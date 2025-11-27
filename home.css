@@ -16,19 +16,10 @@ html, body {
     align-items: center;
     text-align: center;       
     gap: 0.7rem;               
-    margin-top: 4rem;
+    margin-top: 10rem;
     flex-wrap: wrap; 
-}
-
-.contact-content {
-    display: flex;
-    justify-content: center;  
-    align-items: center;     
-    text-align: center;  
-    gap: 0.5rem;      
-    flex-wrap: wrap; 
-    opacity: 0;
-    animation: fadeInBottom 1s ease-out forwards;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
 }
 
 .button2 a {
@@ -38,7 +29,7 @@ html, body {
 }
 
 .button2 a:hover {
-    color: #e34e0e;
+    color: #301304
 }
 
 .content p {
