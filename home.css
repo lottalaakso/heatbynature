@@ -10,16 +10,30 @@ html, body {
 
 .content {
     margin: auto;
-    width: 70%;
     display: flex;
     justify-content: center;  
     align-items: center;
     text-align: center;       
-    gap: 0.7rem;               
-    margin-top: 10rem;
+    gap: 0.7rem;        
     flex-wrap: wrap; 
     font-weight: 500;
     letter-spacing: 0.2rem;
+    position: relative;
+    z-index: 1;
+
+    background-image: url("images/Dalhem-Chamber-Music-hall-Aarhus-DK.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 43rem;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4); 
+    z-index: -1;
 }
 
 .button2 a {
@@ -41,29 +55,12 @@ html, body {
     font-size: 2.7rem;
     color: aliceblue;
     margin-bottom: 0.5rem;
-    margin-top: 7rem;
     letter-spacing: 0.2rem;
     opacity: 0;
     animation: fadeInTop 1s ease-out forwards;
     text-shadow: 2px 2px 4px #3b3a3a;
 }
 
-video{
-
-    background: url("video-fallback.jpg") center center no-repeat;
-    background-size: cover;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    position:fixed;
-    object-fit: fill;
-    object-position: center center;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.8;
-}
       
 @keyframes fadeIn {
     from {
@@ -98,53 +95,44 @@ video{
     }
 }
 
+/* 1000px — tablets & small laptops */
 @media screen and (max-width: 1000px) {
-  .videoContainer {
-    opacity: 0;
-  }
 
-  body {
-  /* https://grabient.com/HQJgbAjANKEKwxABmsOBOALDMB2EOAHNqAMxiKFIyma5TUjBJZSbASHpA/ */
-  background: linear-gradient(90deg, rgba(218, 197, 116, 1.000) 0.000%, rgba(218, 197, 116, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 92.308%, rgba(80, 0, 0, 1.000) 92.308% 100.000%)
-  }
+    .content {
+        margin-top: 0;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
 
-  .content {
-  display: grid;
-  text-align: center;
-  margin-top: -1rem;
-  }
-} 
+    .content p {
+        font-size: 1.7rem;
+    }
 
+    .content h3 {
+        font-size: 2.4rem;
+    }
+}
+
+/* 768px — mobile screens */
 @media screen and (max-width: 768px) {
 
-.videoContainer {
-  opacity: 0;
-}
+    .content {
+        margin-top: 0;
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
 
-body {
-/* https://grabient.com/HQJgbAjANKEKwxABmsOBOALDMB2EOAHNqAMxiKFIyma5TUjBJZSbASHpA/ */
-background: linear-gradient(90deg, rgba(218, 197, 116, 1.000) 0.000%, rgba(218, 197, 116, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 7.692%, rgba(217, 182, 86, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 15.385%, rgba(213, 163, 55, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 23.077%, rgba(208, 143, 23, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 30.769%, rgba(200, 121, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 38.462%, rgba(190, 97, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 46.154%, rgba(178, 72, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 53.846%, rgba(165, 47, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 61.538%, rgba(150, 22, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 69.231%, rgba(134, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 76.923%, rgba(116, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 84.615%, rgba(98, 0, 0, 1.000) 92.308%, rgba(80, 0, 0, 1.000) 92.308% 100.000%)
-}
+    .content p {
+        font-size: 1.4rem;
+        text-shadow: 2px 2px 4px #767575;
+        letter-spacing: 0.1rem;
+    }
 
-
-.content {
-  display: grid;
-  text-align: center;
-  margin-top: -2rem;
-}
-
-.content p {
-  font-size: 2rem;
-  text-shadow: 2px 2px 4px #767575;
-}
-
-.content h3 {
-    font-size: 2rem;
-    text-shadow: 2px 2px 4px #767575;
-}
-
-.button2 a {
-  color: #ff793f;
-}
+    .content h3 {
+        font-size: 1.9rem;
+        text-shadow: 2px 2px 4px #767575;
+        letter-spacing: 0.15rem;
+    }
 
 }
+

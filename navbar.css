@@ -24,7 +24,7 @@ body {
     top: 0;
     z-index: 1000;
     background-color: rgba(255, 255, 255);
-    width: 100%;
+    max-width: 100%;
 }
 
 .button {
@@ -75,12 +75,8 @@ body {
 }
 
 .nav_hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
   width: 30px;
   height: 21px;
-  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -98,11 +94,11 @@ body {
 
 @media screen and (max-width: 768px) {
   .nav {
-    padding: 0 1rem;
+    display: flex;
+    align-items: center;
   }
 
   .button img {
-    padding-left: 0;
     height: 5rem; 
   }
 
@@ -120,6 +116,10 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 1100;
+  }
+
+  .nav_menu ul li a {
+    margin: auto;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -132,20 +132,29 @@ body {
 
   .nav_hamburger {
     display: flex;
+    flex-direction: column;
     margin-left: auto;
-    margin-right: 2rem;
   }
 
   .nav_hamburger span {
     width: 100%;
+    margin: auto;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .nav {
-    padding: 0 2rem;
-    justify-content: space-between;
-  }
+ .nav {
+    height: 8.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: #301304;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255);
+    width: 100%;
+}
 
   .button img {
     padding-left: 0;
@@ -161,4 +170,3 @@ body {
     justify-content: center;
   }
 }
-
