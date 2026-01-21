@@ -78,9 +78,10 @@ html, body {
 
 .pdf {
   background-color: #2596be;
-  max-width: 4.5rem;
+  max-width: 4.7rem;
   padding: 0.6rem;
   border-radius: 0.3rem;
+  display: inline-block;
 }
 
 .pdf:hover {
