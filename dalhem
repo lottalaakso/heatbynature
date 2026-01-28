@@ -3,6 +3,8 @@
 
 <head>
 
+
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VKKL0FQ74G"></script>
 <script>
@@ -13,13 +15,15 @@
   gtag('config', 'G-VKKL0FQ74G');
 </script>
 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="dalhem.css">
     <link rel="icon" type="image/x-icon" href="logo/hbnlogo.png">
-    <title>HBN Finland | Home</title>
+    <title>HBN Finland | Dalhem</title>
 </head>
 
 <body>
@@ -28,6 +32,7 @@
         <div class="button">
             <a href="home"><img src="logo/hbnlogo.png"></a>
         </div>
+
         <center>
         <div class="nav_hamburger">
             <span></span>
@@ -35,28 +40,27 @@
             <span></span>
         </div>
         </center>
-
         <div class="nav_menu">
         <ul id="nav-links">
-            <li class="button"><span><a class="active" href="./home">home</a></span></li>
+            <li class="button"><span><a href="home">home</a></span></li>
             <li class="button"><span><a href="pacvac">pacvac</a></span></li>
-            <li class="button"><span><a href="dalhem">dalhem</a></span></li>
+            <li class="button"><span><a class="active" href="dalhem">dalhem</a></span></li>
             <li class="button"><span><a href="contact">contact</a></span></li>
         </ul>
     </div>
     </nav>
 
+    <main class="page"> 
+
     <!-- Content -->
-    <main class="page">
-    <div class="content1">
-            <p>Contact us at info@hbnfinland.fi or click <span class="button2"><a href="contact">here</a></span></p>
+
+    <div class="content">
+        <p>Coming soon...</p>
     </div>
 
-    <div class="content2">
-        <p>Coming soon...</p>   
-    </div>
     </main>
 
+    
 
     <!-- Footer -->
     <div class="footer">

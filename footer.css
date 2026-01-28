@@ -5,25 +5,24 @@
 }
 
 .footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
+    margin-top: auto;
     width: 100%;
     background-color: #EADBC8;
-    height: 2.5rem;
-    line-height: 2.5rem;
     text-align: center;
 }
 
 .footer img {
-    width: auto;
-    height: 5rem;
-    margin: auto 1rem;
-    padding-left: 8rem;
+    width: 10rem;
+    height: auto;
+    margin: auto;
 }
 
 .footer button {
     transition: all 0.5s;
     cursor: pointer;
 }
-  
+
+.footer p {
+    padding-bottom: 2rem;
+}
+

@@ -49,9 +49,9 @@ body {
 }
 
 .button img{
-    width: auto;
-    height: 6.8rem;
-    margin: auto 1rem;
+    width: 10rem;
+    height: auto;
+    margin: auto 0.5rem;
     padding-left: 3rem;
 }
 
@@ -96,10 +96,17 @@ body {
   .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0 1rem;
   }
 
-  .button img {
-    height: 5rem; 
+ .button img {
+    width: 9.5rem;
+    height: auto;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .nav_menu ul {
@@ -133,7 +140,7 @@ body {
   .nav_hamburger {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
+    justify-content: center;
   }
 
   .nav_hamburger span {

@@ -5,10 +5,20 @@
 }
 
 html, body {
-  overflow-x: hidden;
+    margin: 0;
+    min-height: 100vh;
 }
 
-.content {
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1;
+}
+
+.content1 {
     margin: auto;
     display: flex;
     justify-content: center;  
@@ -28,7 +38,23 @@ html, body {
     height: 43rem;
 }
 
-.content::before {
+
+.content2 {
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    position: relative;
+    z-index: 1;
+    height: 30rem;
+}
+
+.content1::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -46,12 +72,12 @@ html, body {
     color: #301304
 }
 
-.content p {
+.content1 p {
     font-size: 2rem;
     color: aliceblue; 
 }
 
-.content h3 {
+.content1 h3 {
     font-size: 2.7rem;
     color: aliceblue;
     margin-bottom: 0.5rem;
