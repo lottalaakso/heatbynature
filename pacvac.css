@@ -14,6 +14,10 @@ body {
     flex: 1;
 }
 
+.image {
+    text-align: center;
+    margin: 2rem 0;
+}
 
 .tab {
   z-index: 500;
@@ -84,7 +88,7 @@ body {
 }
 
 .product-description h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .pdf {
