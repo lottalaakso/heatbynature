@@ -43,6 +43,7 @@
                 <li class="button"><span><a href="home">home</a></span></li>
                 <li class="button"><span><a href="pacvac">pacvac</a></span></li>
                 <li class="button"><span><a href="dalhem">dalhem</a></span></li>
+                <li class="button"><span><a href="clic">clic</a></span></li>
                 <li class="button"><span><a class="active" href="contact">contact</a></span></li>
             </ul>
     </div>
@@ -53,25 +54,25 @@
     <!-- Contact form -->
 
     <div class="header">
-        <h3>Send Us a Message!</h3>
-        <p>Please fill in the form below to get in touch with us</p>
+        <h3>Lähetä meille viesti!</h3>
+        <p>Täytä alla oleva lomake ottaaksesi meihin yhteyttä</p>
     </div>
 
     <div class="container">
         <form id="contact-form">
-          <input type="text" id="name" name="name" placeholder="Name *" oninvalid="this.setCustomValidity('Please fill out this field')" 
+          <input type="text" id="name" name="name" placeholder="Nimi *" oninvalid="this.setCustomValidity('Please fill out this field')" 
           onchange="this.setCustomValidity('')" required>
       
-          <input type="email" id="email" name="email" placeholder="Email *" oninvalid="this.setCustomValidity('Please fill out this field')"
+          <input type="email" id="email" name="email" placeholder="Sähköposti *" oninvalid="this.setCustomValidity('Please fill out this field')"
           onchange="this.setCustomValidity('')" required>
       
-          <input type="text" id="company" name="company" placeholder="Company">
+          <input type="text" id="company" name="company" placeholder="Yritys">
       
-          <textarea id="message" name="message" placeholder="Message" style="height:200px"></textarea>
+          <textarea id="message" name="message" placeholder="Viesti" style="height:200px"></textarea>
       
           <input type="submit" id="button" value="Send message">
 
-          <p>* Required</p>
+          <p>* Pakollinen kenttä</p>
         </form>
       </div>
 

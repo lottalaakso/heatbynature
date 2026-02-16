@@ -35,9 +35,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 43rem;
+    height: 35rem;
 }
-
 
 .content2 {
     margin: auto;
@@ -54,6 +53,116 @@ body {
     height: 30rem;
 }
 
+.content3 {
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    position: relative;
+    z-index: 1;
+    height: 30rem;
+}
+
+.content4 {
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    position: relative;
+    z-index: 1;
+    height: 30rem;
+}
+
+.main-txt-container {
+    width: 90%;
+}
+
+.main-txt-container p {
+    font-size: 2rem;
+    color: #301304;
+}
+
+.side-img-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 6rem;
+}
+
+.side-img-container img {
+    width: 60%;
+    height: 30%;
+    object-fit: contain;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-main {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.button2 {
+    background-color: #ffffff;
+    border: 1px solid #301304;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.button2 a {
+    color: #301304;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.txt-container {
+    width: 90%;
+}
+
+.txt-container p {
+    font-size: 2rem;
+    color: #301304; 
+}
+
 .content1::before {
     content: "";
     position: absolute;
@@ -62,13 +171,13 @@ body {
     z-index: -1;
 }
 
-.button2 a {
+.button1 a {
     color: #DAC0A3;
     text-decoration: none;
     font-weight: bold;
 }
 
-.button2 a:hover {
+.button1 a:hover {
     color: #301304
 }
 
@@ -142,23 +251,60 @@ body {
 /* 768px — mobile screens */
 @media screen and (max-width: 768px) {
 
-    .content {
+    .content1 {
         margin-top: 0;
         padding: 2rem 1rem;
         gap: 1rem;
+        height: auto;
+        min-height: 25rem;
     }
 
-    .content p {
+    .content1 p {
         font-size: 1.4rem;
         text-shadow: 2px 2px 4px #767575;
         letter-spacing: 0.1rem;
     }
 
-    .content h3 {
+    .content1 h3 {
         font-size: 1.9rem;
         text-shadow: 2px 2px 4px #767575;
         letter-spacing: 0.15rem;
     }
 
+    .content2,
+    .content3,
+    .content4 {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .content2 p,
+    .content3 p,
+    .content4 p {
+        font-size: 1.5rem;
+    }
+
+    .txt-container  {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .side-img-container {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .side-img-container img {
+        width: 80%;
+        height: auto;
+        max-height: 20rem;
+        object-fit: contain;
+    }
 }
 

@@ -18,7 +18,6 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="dalhem.css">
@@ -45,6 +44,7 @@
             <li class="button"><span><a href="home">home</a></span></li>
             <li class="button"><span><a href="pacvac">pacvac</a></span></li>
             <li class="button"><span><a class="active" href="dalhem">dalhem</a></span></li>
+            <li class="button"><span><a href="clic">clic</a></span></li>
             <li class="button"><span><a href="contact">contact</a></span></li>
         </ul>
     </div>
@@ -52,15 +52,204 @@
 
     <main class="page"> 
 
-    <!-- Content -->
+        <nav class="secondary-nav">
+            <div class="sec-nav-container">
+                <a href="#dalhem-panel" class="sec-nav-link">Dalhem Panel</a>
+                <a href="#ah-compact" class="sec-nav-link">Ah-Compact</a>
+                <a href="#ikkunapenkit" class="sec-nav-link">Ikkunapenki- ja peitelevyjärjestelmät</a>
+                <a href="#kannakkeet" class="sec-nav-link">Muut</a>
+            </div>
+        </nav>
 
-    <div class="content">
-        <p>Coming soon...</p>
+    <!-- Dalhem panel -->
+    <div id="dalhem-panel" class="content1">
+        <div class="main-column">
+            <div class="main-txt-container"> 
+                <h1>Dalhem Panel</h1>
+                <p>Dalhem Panel – viilutetut sisäkatto- ja seinäjärjestelmät.
+                Aitoa puuviilua hyödyntävä Dalhem Panel tarjoaa elävän pinnan, joka on ainutlaatuinen jokaisessa projektissa. Yhdistämällä nykyaikaiset 
+                materiaalit ja perinteisen osaamisen luomme järjestelmiä, jotka vastaavat nykyajan tiukkoihin paloturvallisuus-, akustiikka- ja ympäristövaatimuksiin – 
+                tinkimättä arkkitehtonisesta vapaudesta luoda kauneutta sopusoinnussa täydellisen toiminnallisuuden kanssa.
+                Tuotteiden rakenteen ansiosta ne täyttävät korkeat B-s1, d0 -paloluokkavaatimukset.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Kuvaukset-->
+    <div class="content2">
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Dalhem Ribba – Sisäkatto</h1>
+                <p>Dalhem Ribba on joustava sisäkattojärjestelmä luovaan sisustussuunnitteluun. Rimojen runkomateriaalina on kipsilastu- tai MDF-levy, ja ne on pinnoitettu 
+                    korkealaatuisella aidolla puuviilulla. Järjestelmä on helppo asentaa, ja se koostuu pääasiassa kolmesta osasta: rimasta, erityisesti suunnitellusta kannatinrakenteesta 
+                    ja kiinnikkeestä.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Dalhem Ribba – Seinä</h1>
+                <p>Dalhem Ribba soveltuu erinomaisesti myös seinäasennuksiin. Erityissuunniteltu kiinnitysprofiili varmistaa näkymättömät kiinnityspisteet 
+                    ja toimii samalla jatkokappaleena saumattomissa asennuksissa.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Dalhem Planks – Seinä</h1>
+                <p>Dalhem-tuotteita on saatavana myös lankkuina (leveys 100–300 mm) kahdessa eri paksuudessa: 13 mm tai 16 mm.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Dalhem DL List – Sisäkatto</h1>
+                <p>Dalhem Ribba on joustava rima-asennusjärjestelmä luovaan sisustussuunnitteluun. Rimojen runkomateriaalina on kipsilastu- tai MDF-levy, 
+                    Peitelista runkorakenteille. Sopii kaikkiin alaslaskettuihin kattoihin, jotka on toteutettu 24 mm leveällä T-profiililla.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Kuvat-->
+    <div class="content3">
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_panel1.jpg" alt="Kuva 1">
+        </div>
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_panel2.jpg" alt="Kuva 2">
+        </div>
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_panel3.jpg" alt="Kuva 3">
+        </div>
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_panel4.jpg" alt="Kuva 4">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Suurennettu kuva">
+    </div>
+
+    <hr class="separator">
+
+    <!--Ah compact-->
+
+    <div id="ah-compact" class="main-txt-container" style="margin: 2rem auto 0 auto; width: 90%; max-width: 1300px;">
+    <h1>Ah-Compact: Suihkuseinät, väliseinäjärjestelmät, kaapit ja penkit</h1>
+    </div>
+
+    <div class="content4">
+    <div class="side-image">
+        <div class="img-container"> 
+            <img src="images/dalhem-shower.jpg" alt="Kuva 5">
+        </div>
+    </div>
+
+    <div class="side-text-stack">
+        <div class="txt-container"> 
+            <h1>Suihkuseinät</h1>
+            <p>Ah-Compact-suihkuseinäjärjestelmä koostuu ympäristöystävällisistä korkeapainelaminaattiseinistä ja anodisoiduista alumiiniprofiileista. 
+                Kokonaisuutta voidaan täydentää verhokiskollisilla yläpalkkeilla, jotka sisältävät koukut ja liukuvat suihkuverhot. Vakiosyvyys on 900 mm, 
+                mutta valmistamme tuotteita myös mittatilaustyönä.</p>
+        </div>
+
+        <div class="txt-container"> 
+            <h1>Väliseinäjärjestelmä</h1>
+            <p>Ah-Compact on täydellinen väliseinäjärjestelmä julkisiin saniteettitiloihin. Järjestelmä koostuu ovista ja seinistä, jotka on valmistettu 
+                ympäristöystävällisestä ja homogeenisesta korkeapainelaminaatista, sekä anodisoiduista alumiiniprofiileista. Ovet ovat itsestään sulkeutuvia, 
+                ja profiileissa on harjalistat hiljaista käyttöä varten. Säädettävä jalkaosa on valmistettu teräksestä. Järjestelmä on suunniteltu tinkimättömään 
+                lopputulokseen.</p>
+        </div>
+
+        <div class="txt-container"> 
+            <h1>Kylpyhuonekaapit ja penkit</h1>
+            <p>Ah-Compact Bathroom on mallisto erimallisia kylpyhuonekaappeja. Kaapit valmistetaan homogeenisesta korkeapainelaminaatista (HPL). Materiaalin etuja 
+                ovat muun muassa erinomainen kestävyys, kosteudenkestävyys ja pitkä elinkaari – se soveltuu vaativimpiinkin ympäristöihin. Valmistamme kaappeja 
+                vakiokokojen lisäksi täysin asiakkaan toiveiden mukaan.
+                <br><br>Valikoimaamme kuuluvat myös toiminnalliset ja kestävät penkit pukuhuonetiloihin.</p>
+        </div>
+    </div>
+    </div>
+
+    <hr class="separator">
+
+    <!--window sill cladding-->
+
+    <div id="ikkunapenkit" class="content5">
+        <div class="column">
+            <div class="txt-container"> 
+                <h2>Ikkunapenkki- ja peitelevyjärjestelmät (Window sill cladding)</h2>
+                <p>Ah Produktion valmistaa kaapelikanavaratkaisuja, jotka säilyttävät ja 
+                    korostavat tilan arkkitehtuuria. Työskentelemme yhdessä asiakkaidemme kanssa luodaksemme ratkaisuja, jotka vastaavat heidän 
+                    erityisvaatimuksiaan materiaalin, muotoilun, toiminnallisuuden ja budjetin osalta.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Elektronetta</h1>
+                <p>Elektronetta on viilupintainen kaapelikanavajärjestelmä, jossa pistorasiat ovat piilossa, mutta silti helposti saatavilla. Se on 
+                    ihanteellinen ratkaisu korkeussäädettävien työpöytien rinnalle, sillä kanavan etuosasta ei tule ulos johtoja (lukuun ottamatta S4-mallia). 
+                    Elektronetta-ikkunapenkkejä on saatavana sekä suoralla että pyöristetyllä etureunalla.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>PAKO</h1>
+                <p>Pako-kanava näkyvillä pistorasioilla on oikea valinta kohteisiin, joissa pistorasioita käytetään usein ja joissa toiminnallisuus on 
+                    estetiikkaa tärkeämpää. Ikkunatasot voidaan integroida ikkuna-aukkoon. Rasiat napsautetaan suoraan kaapelikanavaan. Kanava on tarpeeksi 
+                    kestävä kantamaan aikuisen painon. Järjestelmään on saatavilla yhteensopivat suojalevyt.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Lattiakanavat</h1>
+                <p>Elektronetta-lattiaratkaisut tarjoavat tyylikkään tavan peittää putkivedot ja sähköjohdot lattianrajassa, esimerkiksi lasijulkisivujen edessä. 
+                    Kanavassa on piilotetut pistorasiat. Kanavien kokoa ja ryhmittelyä voidaan mukauttaa tarpeen mukaan. Elektronetta tuo tilaan ylellisen ilmeen 
+                    kohtuullisin kustannuksin.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Kuvat-->
+    <div class="content6">
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_ikkuna1.jpg" alt="Kuva 1">
+        </div>
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_ikkuna2.jpg" alt="Kuva 2">
+        </div>
+        <div class="img-card" onclick="openImage(this)">
+            <img src="images/dalhem_ikkuna3.jpg" alt="Kuva 3">
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" src="" alt="Suurennettu kuva">
+    </div>
+
+    <hr class="separator">
+
+    <div id="kannakkeet" class="content7">
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Kannakkeet (Brackets)</h1>
+                <p>Ah Produktion aloitti kannakkeiden valmistuksen jo 1950-luvun puolivälissä, ja osa malleista on säilynyt lähes muuttumattomina tähän päivään 
+                    asti. Valmistamme ikkunapenkinkannakkeita, hyllynkannakkeita, penkinkannakkeita sekä erikoisversioita eri tarpeisiin.<br><br>
+                    Kaikki kannakkeet toimitetaan valkoiseksi maalattuina, ellei toisin mainita.<br><br>
+                    Tietyistä malleista, erityisesti Ah-konsolikannakkeista, on mahdollista valmistaa muunnelmia – otathan yhteyttä meihin esittääksesi omat 
+                    toiveesi ja vaatimuksesi.</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="txt-container"> 
+                <h1>Hyllyt, ikkunapenkit ja pöytätasot</h1>
+                <p>Ah Produktion AB valmistaa mittatilaustyönä levymateriaaleja useista eri materiaaleista ja monilla eri viimeistelyillä.
+                <br><br>Valmistamme myös lukuisia erikoismuotoja ja -malleja. Ota yhteyttä pyytääksesi tarjouksen tai kysyäksesi lisätietoja.</p>
+            </div>
+        </div>
     </div>
 
     </main>
 
-    
 
     <!-- Footer -->
     <div class="footer">
@@ -74,6 +263,53 @@
 
     <script src="navbar.js"></script>
 
+    <button id="toTop" title="Takaisin ylös">↑</button>
+
 </body>
+
+<script>
+    function openImage(element) {
+        const clickedImgSrc = element.querySelector('img').src;
+        
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        lightboxImg.src = clickedImgSrc;
+        
+        lightbox.style.display = 'flex';
+        
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+        
+        document.body.style.overflow = 'auto';
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    const toTopButton = document.getElementById("toTop");
+
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            toTopButton.style.display = "block";
+        } else {
+            toTopButton.style.display = "none";
+        }
+    };
+
+    toTopButton.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' 
+        });
+    };
+</script>
 
 </html>
