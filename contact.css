@@ -119,41 +119,7 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-.secondary-nav {
-    position: sticky;
-    top: 60px; 
-    background-color: #ffffff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    z-index: 800;
-    padding: 15px 0;
-    width: 100%;
-}
 
-.sec-nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1300px;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.sec-nav-link {
-    text-decoration: none;
-    color: #301304; /* Ruskea teemaväri */
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    padding: 5px 0;
-}
-
-.sec-nav-link:hover {
-    color: #8b5e3c;
-    border-bottom: 2px solid #8b5e3c;
-}
 
 @keyframes fadeIn {
     from {
@@ -188,14 +154,31 @@ input[type=submit]:hover {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: auto;
-        width: 80%;
+@media screen and (min-width: 1800px) {
+    .header h3 {
+        font-size: 2.5rem;
+    }
+    
+    .header p {
+        font-size: 1.5rem;
     }
 
-    .info {
+    .container {
+        max-width: 850px; /* Hieman leveämpi jättinäytöllä, mutta ei liikaa */
+        padding: 4rem;
+    }
+}
+
+/* --- MOBIILI (768px) --- */
+@media screen and (max-width: 768px) {
+    .container {
         width: 90%;
+        padding: 1.5rem;
+        margin: 2rem auto;
+        background-color: transparent;
+    }
+    
+    .header {
+        font-size: 1.2rem;
     }
 }

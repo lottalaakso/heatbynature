@@ -230,7 +230,6 @@ body {
     }
 }
 
-/* 1000px — tablets & small laptops */
 @media screen and (max-width: 1000px) {
 
     .content {
@@ -248,7 +247,6 @@ body {
     }
 }
 
-/* 768px — mobile screens */
 @media screen and (max-width: 768px) {
 
     .content1 {
@@ -305,6 +303,48 @@ body {
         height: auto;
         max-height: 20rem;
         object-fit: contain;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    .content1, .content2, .content3, .content4 {
+        height: 40rem; 
+        padding-left: calc((100% - 1600px) / 2);
+        padding-right: calc((100% - 1600px) / 2);
+    }
+
+    .main-txt-container, .txt-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content1 h3 {
+        font-size: 4rem;
+    }
+
+    .content1 p, 
+    .main-txt-container p, 
+    .txt-container p {
+        font-size: 2.5rem; 
+        line-height: 1.4;
+    }
+
+    .side-img-container {
+        margin-left: 4rem; 
+    }
+
+    .side-img-container img {
+        width: 70%; 
+        max-height: 35rem;
+    }
+
+    .button2 {
+        padding: 1rem 2rem;
+    }
+    
+    .button2 a {
+        font-size: 1.5rem;
     }
 }
 

@@ -397,3 +397,63 @@ body {
     }
 
 }
+
+@media screen and (min-width: 1800px) {
+
+    /* Keskityksen hallinta: pidetään sisältö max 1600px leveänä */
+    .main-txt-container, 
+    .content2, 
+    .content3, 
+    .content4, 
+    .content5, 
+    .content6, 
+    .content7, 
+    .sec-nav-container,
+    .separator {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Kasvatetaan fonttikokoja, jotta ne vastaavat näytön kokoa */
+    .main-txt-container h1 {
+        font-size: 2.5rem; /* Alun perin 1.7rem */
+    }
+
+    .main-txt-container p {
+        font-size: 1.4rem; /* Alun perin 1.1rem */
+        line-height: 1.6;
+    }
+
+    .txt-container h1, 
+    .side-text-stack h1, 
+    .content7 h1 {
+        font-size: 1.8rem;
+    }
+
+    .txt-container p, 
+    .side-text-stack p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* Ankkurivalikon fontin ja välien kasvatus */
+    .sec-nav-link {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .sec-nav-container {
+        gap: 4rem;
+    }
+
+    /* Kuvakorttien hienosäätö */
+    .img-card {
+        border-radius: 12px; /* Hieman pehmeämpi kulma isolla ruudulla */
+    }
+
+    /* Sivupalkki-kuvan (Content 4) säädöt */
+    .side-image img {
+        box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+    }
+}
