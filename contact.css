@@ -119,7 +119,10 @@ input[type=submit]:hover {
     cursor: pointer;
 }
 
-
+.container h4 {
+    font-size: 0.7rem;
+    font-weight: normal;
+}
 
 @keyframes fadeIn {
     from {
