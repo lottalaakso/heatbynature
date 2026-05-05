@@ -218,7 +218,7 @@ body {
 
 .img-card {
     position: relative;
-    cursor: pointer;
+    /* cursor: pointer; */
     overflow: hidden;
     border-radius: 8px;
     aspect-ratio: 1 / 1;
@@ -231,9 +231,9 @@ body {
     transition: transform 0.3s ease;
 }
 
-.img-card:hover img {
+/* .img-card:hover img {
     transform: scale(1.05); 
-}
+} */
 
 .lightbox {
     display: none;
