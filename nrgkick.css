@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif; 
+}
+
+html, body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1;
+}
+
+.header {
+    text-align: center;
+    height: 18rem;         
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;         
+    justify-content: center; 
+    align-items: center;    
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header img {
+    max-height: 10rem; 
+    height: auto;   
+    width: auto;      
+}
+
+.content1 {
+    margin: 2rem auto auto auto; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    position: relative;
+    z-index: 1;
+}
+
+.content1 .txt-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content1 .img-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content1 .img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 40px 40px 10px;
+}
+
+.content2 {
+    margin: 2rem auto auto auto; /* Yhdistetty margin-top ja margin: auto */
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    position: relative;
+    z-index: 1;
+    /* max-height: 30rem; Poistettu, jotta pitkä teksti ei valu yli laatikosta */
+}
+
+.content2 .txt-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content2 .img-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content2 .img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px 10px 10px 40px;
+}
+
+.content3 {
+    margin: 2rem auto auto auto; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    text-align: center;       
+    gap: 0.7rem;        
+    flex-wrap: wrap; 
+    position: relative;
+    z-index: 1;
+}
+
+.content3 .txt-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content3 .img-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+.content3 .img-container img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 10px 40px 40px 10px;
+}
+
+#toTop {
+    display: none; 
+    position: fixed; 
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+    border: none;
+    outline: none;
+    background-color: #301304; 
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 0;
+}
+
+#toTop:hover {
+    background-color: #555;
+    transform: translateY(-3px); 
+}
+
+@media screen and (max-width: 768px) {
+    
+    .header {
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    .header img {
+        max-height: 6rem; 
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content1, .content2, .content3 {
+        flex-direction: column; 
+        text-align: center;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+
+    .content1 .txt-container, .content1 .img-container,
+    .content2 .txt-container, .content2 .img-container,
+    .content3 .txt-container, .content3 .img-container {
+        width: 100%;
+        min-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .content2 {
+        flex-direction: column-reverse; 
+    }
+
+    .content1 .img-container img,
+    .content2 .img-container img,
+    .content3 .img-container img {
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+    
+    .content1 h1, .content2 h1, .content3 h1 {
+        font-size: 1.8rem;
+    }
+}
