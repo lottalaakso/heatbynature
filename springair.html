@@ -18,15 +18,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="springair.css">
     <link rel="icon" type="image/x-icon" href="logo/hbnlogo.png">
-    <title>HBN Finland | Contact </title>
+    <title>HBN Finland | SpringAir </title>
     <meta name="description" content="Ota yhteyttä ja asiantuntijamme auttavat sinua löytämään parhaat ratkaisut siivoukseen ja asennuksiin. Lähetä viesti 
     tai pyydä tarjousta!">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hbnfinland.fi/contact">
-  <meta property="og:title" content="Ota yhteyttä – HBN Finland Oy">
+  <meta property="og:title" content="Moretti Design – HBN Finland Oy">
   <meta property="og:description" content="Onko sinulla kysyttävää tuotteistamme? Täytä yhteydenottolomake ja asiantuntijamme palaavat asiaan mahdollisimman pian. Palvelemme ammattitaidolla.">
   <meta property="og:image" content="https://hbnfinland.fi/logo/hbnlogo.png">
 </head>
@@ -57,84 +57,19 @@
                           <li><a href="clic">clic</a></li>
                           <li><a href="nrgkick">nrgkick</a></li>
                           <li><a href="moretti">moretti</a></li>
-                          <li><a href="springair">springair</a></li>
+                          <li><a class="active" href="springair">springair</a></li>
                       </ul>
                   </li>
 
-                  <li class="button"><span><a class="active" href="contact">ota yhteyttä</a></span></li>
+                  <li class="button"><span><a href="contact">ota yhteyttä</a></span></li>
               </ul>
           </div>
       </nav>
 
     <main class="page">
-
-    <section class="hero-header">
-        <div class="hero-content">
-            <h1>Ota meihin yhteyttä!</h1>
-            <h3>Asiantuntevat myyjämme ovat apunasi, koski asiasi mitä tahansa tuotemerkkiämme!</h3>
-            <br>
-            <p>Voit myös halutessasi jättää yhteydenottopyynnön alla olevan lomakkeen avulla, jolloin olemme sinuun yhteydessä mahdollisimman pian.</p>
+        <div class="header">
+            <img src="logo/springair.png" alt="Spring Air Logo">
         </div>
-    </section>
-
-    <!-- Contact form -->
-
-    <div class="content-wrapper">
-        <!-- Vasen puoli: Yhteystiedot -->
-        <div class="contacts-section">
-            <!-- <h2>Ota suoraan yhteyttä myyjään</h2> -->
-            <div class="contacts-grid">
-                <div class="contact-card">
-                    <h3>Tiia Mustonen</h3>
-                    <p>tiia@hbnfinland.fi</p>
-                    <p>+358 50 360 8088</p>
-                </div>
-                <div class="contact-card">
-                    <h3>Markus Jåfs</h3>
-                    <p>markus@hbnfinland.fi</p>
-                    <p>+358 50 379 3772</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Oikea puoli: Lomake -->
-        <div class="form-section">
-          <!-- <h2>Tai täytä yhteydenottolomake</h2> -->
-            <div class="container">
-                <form id="contact-form">
-                    <input type="text" id="name" name="name" placeholder="Nimi *" oninvalid="this.setCustomValidity('Täytä tämä kenttä')" onchange="this.setCustomValidity('')" required>
-                    <input type="email" id="email" name="email" placeholder="Sähköposti *" oninvalid="this.setCustomValidity('Täytä tämä kenttä')" onchange="this.setCustomValidity('')" required>
-                    <input type="text" id="company" name="company" placeholder="Yritys">
-                  <p>Valitse alta mitä tuotemerkkiä kyselysi koskee:</p>
-                    <select id="brand" name="brand" class="empty" required onchange="this.classList.remove('empty')">
-                        <option value="" disabled selected hidden>Valitse tuotemerkki *</option>
-                        <option value=""></option>
-                        <option value="pacvac">Pacvac</option>
-                        <option value="springair">SpringAir</option>
-                        <option value="nrgkick">NRGkick</option>
-                        <option value="moretti">Moretti</option>
-                        <option value="dalhem">Dalhem</option>
-                        <option value="clic">CLIC</option>
-                    </select>
-
-                    <textarea id="message" name="message" placeholder="Viesti" style="height:150px"></textarea>
-                    <input type="submit" id="button" value="Lähetä">
-
-                    <p>* Pakollinen kenttä</p>
-                    <h4>Painamalla "Lähetä" hyväksyt, että käsittelemme antamiasi tietoja yhteydenottoosi vastaamiseksi. Lue lisää <a href="pdf/HBNFinland:tietosuojaseloste.pdf" target="_blank" rel="noopener noreferrer">tietosuojaselosteestamme</a>.</h4>
-                </form>
-            </div>
-        </div>
-    </div>
-
-      
-
-      <div id="popup" class="popup">
-        <div class="popup-content">
-          <p id="popup-message">Your message has been sent successfully!</p>
-          <button onclick="closePopup()">Close</button>
-        </div>
-      </div>
       
     </main>
 
@@ -169,39 +104,7 @@
 
 </body>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  emailjs.init('_dWIFfrq8o-PkruSu'); 
 
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const btn = form.querySelector('input[type="submit"]');
-    btn.value = 'Sending...';
-
-    emailjs.sendForm('default_service', 'template_dl9aa2l', form)
-      .then(function(response) {
-        form.reset();
-        btn.value = 'Send message';
-        showPopup('Your message has been sent successfully!');
-      }, function(error) {
-        btn.value = 'Send message';
-        showPopup('Oops! Something went wrong. Please try again.');
-      });
-  });
-
-  function showPopup(message) {
-    const popup = document.getElementById('popup');
-    const popupMessage = document.getElementById('popup-message');
-    popupMessage.textContent = message;
-    popup.style.display = 'flex';
-  }
-
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
-</script>
 
 
 </html>

@@ -1,68 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
-    font-family: Karla;
+    font-family: Karla, sans-serif;
+    box-sizing: border-box;
 }
 
 html, body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
 }
 
 .nav {
     height: 8.5rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
-    color: #301304;
+    color: #000000;
     position: relative;
     top: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255);
+    background-color: #ffffff;
     max-width: 100%;
 }
 
 .button {
-  transition: all 0.5s;
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
 }
 
 .button a.active {
-  font-size: 2rem;
-  font-weight: bold;
+    font-size: 1.75rem;
+    font-weight: bold;
 }
 
 .button a:hover {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-.button img{
+.button img {
     width: 10rem;
     height: auto;
     margin: auto 0.5rem;
     padding-left: 3rem;
 }
 
-.nav_menu ul {
+.nav_menu > ul {
     margin: auto 1rem;
     padding: 0;
     display: flex;
     align-items: center;
-}
-
-.nav_menu ul li {
     list-style: none;
 }
 
@@ -75,105 +71,159 @@ body {
 }
 
 .nav_hamburger {
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
+    display: none;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
 }
 
 .nav_hamburger span {
-  height: 3px;
-  width: 100%;
-  background-color: #DAC0A3;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 5px;
 }
 
-#nav-links li {
-    position: relative;
+@media screen and (min-width: 851px) {
+    .nav_menu ul li.dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        min-width: 13rem;
+        padding: 0.5rem 0;
+        margin: 0;
+        list-style: none;
+        border-radius: 4px;
+        z-index: 1200;
+    }
+
+    .nav_menu ul li.dropdown:hover .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown-menu li {
+        width: 100%;
+    }
+
+    .dropdown-menu li a {
+        font-size: 1.25rem;
+        padding: 0.75rem 1.5rem;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #f5f5f5;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 851px) {
+    .nav {
+        height: 8.5rem;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .button img {
+        padding-left: 0;
+        margin-right: 3rem; 
+        height: 5.5rem;
+        width: auto;
+    }
+
+    .nav_menu {
+        margin-left: auto; 
+    }
+
+    .nav_menu ul {
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 850px) {
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 5rem;
-    padding: 0 1rem;
-  }
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5rem;
+        padding: 0 1rem;
+    }
 
- .button img {
-    width: 9.5rem;
-    height: auto;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-  }
+    .button img {
+        width: 9.5rem;
+        height: auto;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
+    }
 
-  .nav_menu ul {
-    position: absolute;
-    top: 7rem; 
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 1100;
-  }
+    .nav_hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-  .nav_menu ul li a {
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+    .nav_hamburger span {
+        width: 100%;
+        margin: auto;
+    }
 
-  .nav_menu ul.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    .nav_menu > ul {
+        position: absolute;
+        top: 5rem; 
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 1100;
+        box-shadow: 0px 10px 15px rgba(0,0,0,0.05);
+    }
 
-  .nav_hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    .nav_menu > ul.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
-  .nav_hamburger span {
-    width: 100%;
-    margin: auto;
-  }
-}
+    .dropdown > span, 
+    .dropdown-toggle {
+        display: none !important;
+    }
 
-@media screen and (max-width: 1000px) {
- .nav {
-    height: 8.5rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    color: #301304;
-    position: relative;
-    top: 0;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255);
-    width: 100%;
-}
+    .dropdown-menu {
+        display: flex !important;
+        flex-direction: column;
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        width: 100%;
+        list-style: none;
+    }
 
-  .button img {
-    padding-left: 0;
-    margin-right: 3rem; 
-    height: 5.5rem;
-  }
+    .dropdown-menu li {
+        width: 100%;
+    }
 
-  .nav_menu {
-    margin-left: auto; 
-  }
-
-  .nav_menu ul {
-    justify-content: center;
-  }
+    .dropdown-menu li a {
+        font-size: 1.75rem; 
+        text-align: center;
+        padding: 0.75rem 0;
+        display: block;
+        color: #000000;
+    }
 }

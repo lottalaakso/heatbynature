@@ -23,9 +23,40 @@
     cursor: pointer;
 }
 
-.footer p {
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.footer-social a {
+    color: #000000; /* Kuvakkeiden perusväri */
+    display: inline-block;
+}
+
+.footer-social a:hover {
+    color: #ff8f5f; /* Väri kun hiiri viedään päälle */
+    transform: translateY(-2px); /* Pieni nosto-efekti */
+}
+
+.footer-social svg {
+    width: 24px;
+    height: 24px;
+    display: block;
 }
 
 .footer-pdf {
     padding-bottom: 2rem;
+    text-decoration: none;
+}
+
+.footer-pdf a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-pdf a:hover {
+    color: #ff8f5f;
 }
