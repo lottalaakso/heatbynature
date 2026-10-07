@@ -15,16 +15,292 @@ body {
 }
 
 .header {
-    text-align: center;
-    height: 6rem;         
+    text-align: center;  
+    width: 100%;
+    height: auto;
     display: flex;         
     justify-content: center; 
     align-items: center;    
-    letter-spacing: 0.2rem;
+    overflow: hidden;
+}
+
+.header picture {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header img {
-    max-height: 10rem; 
-    height: auto;   
-    width: auto;      
+    max-width: 70%;
+    height: 100%;
+    display: block;
+    object-fit: contain; 
+    object-position: center;
+}
+
+.company-text {
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.company-text h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.company-text p {
+    font-size: 1.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1300px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 0;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-wrapper {
+    /* background-color: #f9f9f9; */
+    background-image: url('images/springair-tausta.png');
+    background-size: cover;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    height: 400px;
+}
+
+.card-img-wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    margin: 0 0 0.8rem 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-content h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 1rem 0;
+    color: #666;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1;
+}
+
+.card-features li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-features li::before {
+    content: "•";
+    color: #ff8f5f; 
+    font-weight: bold;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.info-text {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 4rem;
+}
+
+.info-text h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+
+.info-text p {
+    font-size: 1.2rem;
+}
+
+.info-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact-button {
+    background-color: #ff8f5f;
+    color: white;
+    border: 2px solid #ff8f5f;
+}
+
+.contact-button:hover {
+    background-color: #ffffff;
+    border-color: #ff8f5f;
+    color: #ff8f5f;
+}
+
+.contact-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.info-text ul {
+    padding: 0;
+}
+
+.info-text li {
+    text-align: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.info-text li strong {
+    font-weight: 700;
+    color: #ff8f5f;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem;
+    }
+
+    .company-text, 
+    .info-text {
+        width: 85%; 
+    }
+
+    .card-img-wrapper {
+        height: 320px; 
+    }
+}
+
+/* Mobiililaitteet (alle 768px) */
+@media (max-width: 768px) {
+    .header img {
+        max-width: 90%; 
+    }
+
+    .company-text, 
+    .info-text {
+        width: 90%;
+    }
+
+    .company-text h2, 
+    .info-text h2 {
+        font-size: 1.75rem; 
+    }
+
+    .company-text p {
+        font-size: 1.2rem;
+    }
+
+    .info-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .info-text li strong {
+        font-size: 1.25rem;
+    }
+
+    .info-text ul {
+        margin-top: 4rem;
+    }
+
+    .info-text li {
+        padding: 0;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+        width: 95%;
+    }
+
+    .card-img-wrapper {
+        height: 280px; 
+    }
+
+    .contact-button {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-img-wrapper {
+        height: 320px;
+    }
+
+    .contact-button {
+        width: auto;
+    }
+
+    .company-text {
+        max-width: 50%;
+    }
+
+    .info-text {
+        max-width: 50%;
+    }
+
+    .info-text li {
+        padding: 0;
+        text-align: center;
+    }
 }
