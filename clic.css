@@ -18,34 +18,41 @@ body {
     flex: 1;
 }
 
+/* Kuva */
+
 .header {
     text-align: center;  
-    max-height: 40rem;
-    background-color: #292929;
+    width: 100%;
+    height: auto;
     display: flex;         
     justify-content: center; 
     align-items: center;    
     overflow: hidden;
-    width: 100%;
 }
 
-.header picture,
-.header img {
+.header picture {
     width: 100%;
     height: 100%;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header img {
-    object-fit: cover;
+    max-width: 70%;
+    height: 100%;
+    display: block;
+    object-fit: contain; 
     object-position: center;
 }
 
-.content1 {
+/* CLIC info */
+
+.info-content {
     margin: auto;
     display: flex;
     justify-content: center;  
-    align-items: center;
+    align-items: start;
     text-align: center;       
     gap: 0.7rem;        
     flex-wrap: wrap; 
@@ -55,7 +62,7 @@ body {
     margin-top: 2rem;
 }
 
-.column {
+.info-column {
     flex: 1;
     display: flex;
     align-items: start;
@@ -67,14 +74,8 @@ body {
 }
 
 .txt-container h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
-    letter-spacing: 0.1rem;
-}   
-
-.txt-container h2 {
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
 }   
 
 .txt-container p {
@@ -92,74 +93,113 @@ body {
     margin-bottom: 0.5rem; 
 }
 
-.content2 {
-    margin: auto;
-    display: flex;
-    justify-content: center ;  
-    align-items: start;
-    text-align: center;       
-    gap: 0.7rem;        
-    flex-wrap: wrap; 
-    position: relative;
-    z-index: 1;
-    height: auto;
-    margin-bottom: 5rem;
-}
-
-.content3 {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr; 
-    justify-content: center ;  
-    align-items: start;
-    text-align: center;       
-    gap: 0.7rem;        
-    position: relative;
-    z-index: 1;
-    height: auto;
-    margin-bottom: 5rem;
-}
-
-.content3 .column {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.content2 .img-container {
+.product-section {
+    width: 90%;
+    max-width: 900px; /* Pidetään lukuleveys siistinä */
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.content2 .img-container img {
+/* CLIC TOP tuotteet */
+
+.clictop-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start;
+    text-align: left;     
+    flex-wrap: wrap; 
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    max-width: 1300px;
+}
+
+.clictop-column {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+
+/* CLIC tuotteet */
+
+.clic-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-start;
+    text-align: left;     
+    flex-wrap: wrap; 
+    position: relative;
+    z-index: 1;
+    margin-top: 2rem;
+    max-width: 1300px;
+}
+
+.clic-column {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-right: 3rem;
+}
+
+.clic-column:last-child {
+    flex: 2;                  
+    max-width: 800px;        
+}
+
+.clic-column:first-child {
+    flex: 2;                  
+    max-width: 200px;
+}
+
+.clic-txt-container {
     width: 100%;
-    max-width: 680px;
-    height: auto;
+}
+
+.clic-txt-container h1 {
+    font-size: 1.9rem;
+    margin-bottom: 0.5rem;
+}   
+
+.clic-txt-container h2 {
+    font-size: 1.4rem;
+}   
+
+.clic-txt-container p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+}
+
+.clic-txt-container ul {
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+}
+
+.clic-txt-container ul li {
+    margin-bottom: 0.5rem; 
+    font-size: 1.3rem;
 }
 
 .clic-img-container {
     display: flex;
-    justify-content: center;
+    flex-direction: row;       
+    justify-content: center;   
     align-items: center;
-    gap: 1rem;
-    max-width: 100%;
+    gap: 2rem;                  
+    margin: 2rem 0;
+    width: 100%;
 }
 
 .clic-img-container img {
-    flex: 0 0 45%;     
-    max-width: 45%;
+    max-width: 250px;           
+    width: 45%;                
     height: auto;
-}
-
-.mobile-img {
-    display: none;
-}
-
-.desktop-img {
-    display: block;
-    width: 100%;
-    height: auto;
+    object-fit: contain;
 }
 
 .pdf {
@@ -217,43 +257,6 @@ body {
 #toTop:hover {
     background-color: #555;
     transform: translateY(-3px); 
-}
-
-.secondary-nav {
-    position: sticky;
-    margin-top: 2rem;
-    top: 60px; 
-    background-color: #ffffff;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    z-index: 800;
-    padding: 15px 0;
-    width: 100%;
-}
-
-.sec-nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1300px;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.sec-nav-link {
-    text-decoration: none;
-    color: #000000; 
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    padding: 5px 0;
-}
-
-.sec-nav-link:hover {
-    color: #000000;
-    border-bottom: 2px solid #000000;
 }
 
 @media (max-width: 1024px) {
@@ -483,10 +486,5 @@ body {
         width: 65px;
         height: 65px;
         font-size: 25px;
-    }
-
-    .sec-nav-link {
-        font-size: 1.8rem;
-        letter-spacing: 2px;
     }
 }
