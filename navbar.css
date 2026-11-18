@@ -44,7 +44,7 @@ body {
 }
 
 .button a:hover {
-    font-weight: bold;
+    text-shadow: 1px 0 0 currentColor;
 }
 
 .button img {
